@@ -69,10 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.project-card').forEach(card => {
         card.addEventListener('click', () => {
             const isExpanded = card.classList.contains('expanded');
-            
-            // Optional: Close all other cards when one is opened
             document.querySelectorAll('.project-card').forEach(c => c.classList.remove('expanded'));
-            
+            if (!isExpanded) {
+                card.classList.add('expanded');
+            }
+        });
+    });
+
+    // Expandable Skill Cards
+    document.querySelectorAll('.skill-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const isExpanded = card.classList.contains('expanded');
+            document.querySelectorAll('.skill-card').forEach(c => c.classList.remove('expanded'));
             if (!isExpanded) {
                 card.classList.add('expanded');
             }
