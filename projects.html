@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lingaraj - Senior DevOps Engineer Projects.">
+    <title>Projects | Lingaraj DevOps</title>
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Background -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand">
+                <span class="icon"><i class="fas fa-terminal"></i></span>
+                <span class="name">Lingaraj</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="about.html">Experience & Skills</a>
+            </nav>
+            <div class="nav-cta hide-mobile">
+                <a href="https://linkedin.com/in/lingarajjayli" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/lingarajjayli" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="mailto:lingarajjayli@gmail.com" aria-label="Email" class="social-icon"><i class="fas fa-envelope"></i></a>
+                <a href="resume.pdf" download="Lingaraj-DevOps-Resume.pdf" class="btn-primary btn-small">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
+            </div>
+            <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <!-- Featured Projects Section -->
+        <section class="projects section">
+            <div class="container">
+                <div class="section-header reveal page-header">
+                    <h2>Featured <span class="gradient-text">Projects</span> & Impact</h2>
+                    <p>A closer look at the mission-critical systems and architectural transformations I've spearheaded over my career.</p>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Project 1: Infra Creation -->
+                    <article class="project-card reveal">
+                        <div class="project-visual glyph-bg">
+                            <div class="grid-pattern"></div>
+                            <i class="fas fa-network-wired display-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>AWS</span><span>Azure</span><span>Terraform</span><span>Networking</span>
+                            </div>
+                            <h3>Infrastructure Creation from Scratch</h3>
+                            <p>Architected and completely provisioned highly scalable, multi-cloud infrastructure spanning AWS and Azure for <strong>Saviynt</strong>. Utilized Terraform for the automated deployment of VPC peering, transit gateways, EKS clusters, and highly available RDS instances, ensuring resilient cross-region topology and reducing provisioning time to mere minutes.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: DMS Migration -->
+                    <article class="project-card reveal delay-1">
+                        <div class="project-visual glyph-bg">
+                            <div class="data-pattern"></div>
+                            <i class="fas fa-database display-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>AWS DMS</span><span>Azure DMS</span><span>MySQL</span><span>CDC</span>
+                            </div>
+                            <h3>Enterprise Database Migration (DMS)</h3>
+                            <p>Engineered the end-to-end migration strategy for over <strong>80 enterprise client databases</strong> utilizing AWS DMS and Azure DMS. I constructed S3 Parquet target endpoints, implemented Change Data Capture (CDC) for real-time synchronization, and ensured absolute data integrity with zero data loss, slashing total migration downtime by 70%.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Laceworks & SOC2 -->
+                    <article class="project-card reveal">
+                        <div class="project-visual glyph-bg">
+                            <div class="shield-pattern"></div>
+                            <i class="fas fa-shield-halved display-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>Lacework</span><span>SOC 1/2</span><span>IRAP</span><span>CloudTrail</span>
+                            </div>
+                            <h3>Laceworks Security & Compliance Guardrails</h3>
+                            <p>Spearheaded rigorous audit preparations for SOC 1/2 and IRAP standards across 50+ cloud accounts. By integrating <strong>Lacework</strong> for continuous security posture management, I successfully remediated 100+ vulnerabilities, enforced strict IAM least-privilege policies, and implemented automated encryption and CloudTrail monitoring.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: ISPM -->
+                    <article class="project-card reveal delay-1">
+                        <div class="project-visual glyph-bg">
+                            <div class="code-pattern"></div>
+                            <i class="fas fa-code-branch display-icon"></i>
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>CI/CD</span><span>ISPM</span><span>GitLab</span><span>Microservices</span>
+                            </div>
+                            <h3>ISPM Delivery & Automation</h3>
+                            <p>Developed robust continuous integration and continuous deployment pipelines for mission-critical Information Security & Privacy Management (ISPM) applications. This transition automated unit testing, standardized Docker container builds, and guaranteed secure, immutable releases into the production environment.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Troubleshooting -->
+                    <article class="project-card reveal full-width">
+                        <div class="project-visual glyph-bg">
+                            <div class="pulse-pattern"></div>
+                            <i class="fas fa-wave-square display-icon"></i>
+                        </div>
+                        <div class="project-content flex-row">
+                            <div class="content-left">
+                                <div class="tags">
+                                    <span>Cloud Networking</span><span>VPC</span><span>Routing</span><span>Troubleshooting</span>
+                                </div>
+                                <h3>Complex Cloud Troubleshooting & Networking</h3>
+                            </div>
+                            <div class="content-right">
+                                <p>Routinely acted as the escalation point for complex cloud anomalies. I diagnosed and resolved intricate network connectivity bottlenecks occurring between QA subnets and production databases. By restructuring Network ACLs, optimizing complex routing tables, and establishing secure Site-to-Site VPNs, I eliminated network latency and fortified data transit security across hybrid cloud setups.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="icon"><i class="fas fa-terminal"></i></span> Lingaraj
+            </div>
+            <p>&copy; 2026 Lingaraj. Designed for Impact & Scale.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

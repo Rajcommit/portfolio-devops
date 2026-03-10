@@ -1,4 +1,5 @@
-// Premium Reveal Animations
+// JS Handlers
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // Smooth reveal for sections
@@ -12,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // observer.unobserve(entry.target); // Optional: animate only once
             }
         });
     }, observerOptions);
@@ -21,10 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Trigger hero animations explicitly on load
+    // Automatically trigger reveals on load for anything currently in viewport
     setTimeout(() => {
-        document.querySelectorAll('.hero .reveal').forEach(el => {
-            el.classList.add('active');
+        document.querySelectorAll('.reveal').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                el.classList.add('active');
+            }
         });
     }, 100);
 
@@ -39,4 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = 'none';
         }
     });
+
+    // Mobile Menu Toggle logic (simple)
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if(mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+            if(navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'var(--bg-surface)';
+                navLinks.style.padding = '20px';
+                navLinks.style.borderBottom = '1px solid var(--border-subtle)';
+            }
+        });
+    }
 });
