@@ -192,32 +192,8 @@ code .comment { color: #64748B; font-style: italic; }
 .project-card h3 { font-size: 1.75rem; margin-bottom: 0; }
 .project-card p { font-size: 1.05rem; }
 
-/* Expandable logic */
 .project-details {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, margin-top 0.4s ease, opacity 0.4s ease;
-}
-.project-card.expanded .project-details {
-    max-height: 500px;
-    margin-top: 16px;
-    opacity: 1;
-}
-.expand-btn {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-    pointer-events: none;
-}
-.project-card.expanded .expand-btn {
-    transform: translateY(-50%) rotate(180deg);
+    opacity: 1; margin-top: 16px;
 }
 
 /* Timeline */
