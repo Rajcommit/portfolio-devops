@@ -3,226 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lingaraj - Senior DevOps Engineer. AWS, Azure, Terraform, Kubernetes.">
-    <title>Lingaraj. Senior DevOps Engineer.</title>
-    <!-- Google Fonts for an Apple-like minimal grotesque sans-serif -->
+    <meta name="description" content="Lingaraj - Senior DevOps Engineer. Expertise in AWS, Azure, Terraform, Kubernetes, and Cloud Security.">
+    <title>Lingaraj | Senior DevOps Engineer</title>
+    <!-- Premium Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for standard minimal icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Minimalist Dark Nav Bar -->
-    <nav class="global-nav">
-        <div class="nav-content">
-            <a href="#" class="nav-logo">Lingaraj.</a>
-            <div class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#expertise">Expertise</a>
-                <a href="#experience">Experience</a>
+    <!-- Ambient Glowing Background -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="brand">
+                <span class="icon"><i class="fas fa-terminal"></i></span>
+                <span class="name">Lingaraj</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-            </div>
-            <a href="mailto:lingarajjayli@gmail.com" class="nav-cta">Hire</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+            </nav>
+            <a href="mailto:lingarajjayli@gmail.com" class="btn-outline">Contact Me</a>
+            <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Sub Nav if needed, keeping it ultra clean -->
-    <div class="local-nav">
-        <div class="local-nav-content">
-            <span class="local-title">Senior DevOps Engineer</span>
-        </div>
-    </div>
-
-    <!-- Hero Section: High impact, large text, centered -->
-    <section class="section hero-section dark-theme">
-        <div class="hero-content reveal-up">
-            <h1 class="headline">Cloud. Automated.</h1>
-            <h2 class="subheadline">Architecting secure, scalable infrastructure for the modern web.</h2>
-            <p class="hero-intro">I am Lingaraj, a Senior DevOps Engineer based in Bengaluru. With over 6 years of experience, I specialize in Multi-Cloud Infrastructure (AWS & Azure), Kubernetes, and CI/CD Automation.</p>
-            <div class="cta-group">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="#overview" class="link-secondary">Learn more <i class="fas fa-chevron-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Overview Section: Clean White Background, large bold statements -->
-    <section id="overview" class="section light-theme padding-large">
-        <div class="content-container">
-            <div class="text-center reveal-up">
-                <h2 class="section-headline">6+ Years of Excellence.</h2>
-                <h3 class="section-subheadline text-gray">Operational toil reduced to zero.</h3>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-card reveal-up" style="transition-delay: 0s;">
-                    <div class="stat-number">80+</div>
-                    <div class="stat-label">Databases Migrated</div>
-                    <p class="stat-desc">Zero data loss across complex AWS & Azure enterprise environments.</p>
-                </div>
-                <div class="stat-card reveal-up" style="transition-delay: 0.1s;">
-                    <div class="stat-number">90%</div>
-                    <div class="stat-label">Toil Reduction</div>
-                    <p class="stat-desc">Through rigorous automation of cloud account onboarding and provisioning.</p>
-                </div>
-                <div class="stat-card reveal-up" style="transition-delay: 0.2s;">
-                    <div class="stat-number">30%</div>
-                    <div class="stat-label">Cost Optimization</div>
-                    <p class="stat-desc">Driving down organizational cloud spend through right-sizing and architecture.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expertise Section: Apple Grid Style -->
-    <section id="expertise" class="section gray-theme padding-large">
-        <div class="content-container">
-            <div class="text-center reveal-up">
-                <h2 class="section-headline">Pro capability.<br> Built right in.</h2>
-            </div>
-            
-            <div class="bento-grid">
-                <!-- Large Feature -->
-                <div class="bento-item span-2 dark-card reveal-up">
-                    <div class="bento-text">
-                        <h3>Infrastructure as Code</h3>
-                        <p>Terraform modules, remote state, and Ansible playbooks for reproducible, version-controlled cloud architecture.</p>
-                    </div>
-                </div>
-
-                <!-- Small Feature -->
-                <div class="bento-item light-card reveal-up">
-                    <div class="bento-text">
-                        <h3>Multi-Cloud</h3>
-                        <p>Deep expertise in AWS and Azure networking, compute, and serverless.</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <div class="badge">Available for new opportunities</div>
+                    <h1 class="hero-title">Architecting the <span class="gradient-text">Future</span> of Cloud Infrastructure.</h1>
+                    <p class="hero-subtitle">
+                        I am a <strong>Senior DevOps Engineer</strong> specializing in designing, building, and securing enterprise-grade multi-cloud environments. From provisioning infrastructure from scratch to orchestrating massive database migrations and resolving complex cloud bottlenecks, I transform operational friction into scalable automation.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">Explore My Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="#experience" class="btn-secondary">View Experience</a>
                     </div>
                 </div>
                 
-                <!-- Small Feature -->
-                <div class="bento-item light-card reveal-up">
-                    <div class="bento-text">
-                        <h3>Kubernetes</h3>
-                        <p>EKS cluster provisioning, Helm charts, and container lifecycle orchestration.</p>
-                    </div>
-                </div>
+                <!-- Code Snippet Visual -->
+                <div class="hero-visual reveal delay-1">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="filename">main.tf</div>
+                        </div>
+                        <div class="window-body">
+<pre><code><span class="keyword">module</span> <span class="string">"enterprise_infrastructure"</span> {
+  <span class="keyword">source</span>  = <span class="string">"lingaraj/multi-cloud/aws"</span>
+  <span class="keyword">version</span> = <span class="string">"~> 2.0"</span>
 
-                <!-- Large Feature -->
-                <div class="bento-item span-2 dark-card reveal-up">
-                    <div class="bento-text">
-                        <h3>CI/CD Mastery</h3>
-                        <p>GitLab CI, Jenkins, and GitHub Actions. Automated testing, security scanning, and deployment pipelines bridging code to production seamlessly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section: Full width feature strips -->
-    <section id="projects" class="section light-theme padding-large">
-        <div class="content-container">
-            <div class="text-center reveal-up">
-                <h2 class="section-headline">Mission-critical work.</h2>
-                <h3 class="section-subheadline text-gray">Built for scale, secured by design.</h3>
-            </div>
-
-            <div class="project-feature reveal-up">
-                <div class="project-info">
-                    <span class="eyebrow">Automation</span>
-                    <h3>Multi-Cloud Account Onboarding</h3>
-                    <p>Designed Terraform modules acting as AWS and Azure vending machines. Provisioned accounts, integrated Security Hub & GuardDuty across 25+ regions, reducing setup from days to minutes.</p>
-                </div>
-                <div class="project-visual bg-gray">
-                    <i class="fas fa-server large-icon"></i>
-                </div>
-            </div>
-
-            <div class="project-feature reverse reveal-up">
-                <div class="project-info">
-                    <span class="eyebrow">Database Migration</span>
-                    <h3>Enterprise DB Migration Tooling</h3>
-                    <p>Orchestrated the architectural framework to migrate 80+ enterprise databases using AWS DMS and Azure DMS. Built Parquet endpoints and CDC pipelines for zero-downtime synchronization.</p>
-                </div>
-                <div class="project-visual bg-dark text-white">
-                    <i class="fas fa-database large-icon"></i>
-                </div>
-            </div>
-
-            <div class="project-feature reveal-up">
-                <div class="project-info">
-                    <span class="eyebrow">Compliance</span>
-                    <h3>SOC 1/2 & IRAP Guardrails</h3>
-                    <p>Enforced ISM controls and automated security auditing across 50+ cloud accounts. Resolved over 100+ Lacework incidents and instituted strict MFA and IAM least-privilege standards.</p>
-                </div>
-                <div class="project-visual bg-gray">
-                    <i class="fas fa-shield-halved large-icon"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline: Apple-esque clean typography -->
-    <section id="experience" class="section dark-theme padding-large center-text">
-        <div class="content-container max-width-small">
-            <h2 class="section-headline reveal-up">Five years of momentum.</h2>
-            
-            <div class="list-timeline reveal-up">
-                <div class="list-item">
-                    <div class="list-year">2024–Present</div>
-                    <div class="list-content">
-                        <h4>Senior DevOps Engineer</h4>
-                        <h5>Saviynt India Pvt Ltd</h5>
-                        <p>Leading large-scale DB migrations, SOC 1/2 compliance implementations, and AWS/Azure automation.</p>
-                    </div>
-                </div>
-                
-                <div class="list-item">
-                    <div class="list-year">2021–2024</div>
-                    <div class="list-content">
-                        <h4>Senior DevOps Engineer</h4>
-                        <h5>Opulence Techno Soft Pvt Ltd</h5>
-                        <p>Owned Docker/Kubernetes CI/CD platforms, Jenkins pipelines, and Datadog enterprise monitoring strategies.</p>
-                    </div>
-                </div>
-
-                <div class="list-item">
-                    <div class="list-year">2019–2021</div>
-                    <div class="list-content">
-                        <h4>DevOps Engineer</h4>
-                        <h5>Opulence Techno Soft Pvt Ltd</h5>
-                        <p>Migrated version control infrastructure, operationalized Ansible deployment workflows.</p>
-                    </div>
-                </div>
-
-                <div class="list-item">
-                    <div class="list-year">2018–2019</div>
-                    <div class="list-content">
-                        <h4>Linux System Administrator</h4>
-                        <h5>Opulence Techno Soft Pvt Ltd</h5>
-                        <p>Core server management, backup/recovery protocols, hardware automation.</p>
+  environment     = <span class="string">"production"</span>
+  multi_region    = <span class="boolean">true</span>
+  enable_dms      = <span class="boolean">true</span>
+  
+  security = {
+    framework = <span class="string">"SOC2_IRAP"</span>
+    lacework  = <span class="boolean">true</span>
+  }
+  
+  <span class="comment"># Automated 80+ enterprise DB migrations</span>
+  <span class="comment"># 90% reduction in manual toil</span>
+}</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="global-footer light-theme">
-        <div class="footer-content content-container">
-            <div class="footer-contact">
-                <h3>Let's talk scale.</h3>
-                <div class="contact-links">
-                    <a href="mailto:lingarajjayli@gmail.com">lingarajjayli@gmail.com</a>
-                    <a href="tel:+919482830609">+91-9482830609</a>
-                    <a href="https://linkedin.com/in/lingarajjayli" target="_blank">LinkedIn Profile</a>
+        <!-- Featured Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Featured <span class="gradient-text">Projects</span> & Impact</h2>
+                    <p>A closer look at the mission-critical systems and architectural transformations I've spearheaded over my career.</p>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Project 1: Infra Creation -->
+                    <article class="project-card reveal">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Cloud Infrastructure">
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>AWS</span><span>Azure</span><span>Terraform</span><span>Networking</span>
+                            </div>
+                            <h3>Infrastructure Creation from Scratch</h3>
+                            <p>Architected and completely provisioned highly scalable, multi-cloud infrastructure spanning AWS and Azure for <strong>Saviynt</strong>. Utilized Terraform for the automated deployment of VPC peering, transit gateways, EKS clusters, and highly available RDS instances, ensuring resilient cross-region topology and reducing provisioning time to mere minutes.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: DMS Migration -->
+                    <article class="project-card reveal delay-1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="Database Servers">
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>AWS DMS</span><span>Azure DMS</span><span>MySQL</span><span>CDC</span>
+                            </div>
+                            <h3>Enterprise Database Migration (DMS)</h3>
+                            <p>Engineered the end-to-end migration strategy for over <strong>80 enterprise client databases</strong> utilizing AWS DMS and Azure DMS. I constructed S3 Parquet target endpoints, implemented Change Data Capture (CDC) for real-time synchronization, and ensured absolute data integrity with zero data loss, slashing total migration downtime by 70%.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Laceworks & SOC2 -->
+                    <article class="project-card reveal">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop" alt="Cybersecurity Shield">
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>Lacework</span><span>SOC 1/2</span><span>IRAP</span><span>CloudTrail</span>
+                            </div>
+                            <h3>Laceworks Security & Compliance Guardrails</h3>
+                            <p>Spearheaded rigorous audit preparations for SOC 1/2 and IRAP standards across 50+ cloud accounts. By integrating <strong>Lacework</strong> for continuous security posture management, I successfully remediated 100+ vulnerabilities, enforced strict IAM least-privilege policies, and implemented automated encryption and CloudTrail monitoring.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: ISPM -->
+                    <article class="project-card reveal delay-1">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop" alt="Code on Screen">
+                        </div>
+                        <div class="project-content">
+                            <div class="tags">
+                                <span>CI/CD</span><span>ISPM</span><span>GitLab</span><span>Microservices</span>
+                            </div>
+                            <h3>ISPM Delivery & Automation</h3>
+                            <p>Developed robust continuous integration and continuous deployment pipelines for mission-critical Information Security & Privacy Management (ISPM) applications. This transition automated unit testing, standardized Docker container builds, and guaranteed secure, immutable releases into the production environment.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Troubleshooting -->
+                    <article class="project-card reveal full-width">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop" alt="Network Cables">
+                        </div>
+                        <div class="project-content flex-row">
+                            <div class="content-left">
+                                <div class="tags">
+                                    <span>Cloud Networking</span><span>VPC</span><span>Routing</span><span>Troubleshooting</span>
+                                </div>
+                                <h3>Complex Cloud Troubleshooting & Networking</h3>
+                            </div>
+                            <div class="content-right">
+                                <p>Routinely acted as the escalation point for complex cloud anomalies. I diagnosed and resolved intricate network connectivity bottlenecks occurring between QA subnets and production databases. By restructuring Network ACLs, optimizing complex routing tables, and establishing secure Site-to-Site VPNs, I eliminated network latency and fortified data transit security across hybrid cloud setups.</p>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-                <p>Copyright © 2026 Lingaraj. Designed for Impact.</p>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Professional <span class="gradient-text">Journey</span></h2>
+                    <p>Over half a decade of accelerating cloud adoption and operational excellence.</p>
+                </div>
+
+                <div class="timeline">
+                    
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Senior DevOps Engineer</h3>
+                                    <h4>Saviynt India Pvt Ltd</h4>
+                                </div>
+                                <span class="date">Jun 2024 - Present</span>
+                            </div>
+                            <p>Driving multi-cloud infrastructure provisioning from scratch, focusing on scalability and security. Key achievements include the orchestration of massive DMS projects for enterprise databases, embedding Lacework for continuous SOC 1/2 compliance scanning, and reducing overall cloud operational toil by 90% via Terraform automation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Senior DevOps Engineer</h3>
+                                    <h4>Opulence Techno Soft Pvt Ltd</h4>
+                                </div>
+                                <span class="date">Apr 2021 - Jun 2024</span>
+                            </div>
+                            <p>Owned the CI/CD platform employing Docker, Kubernetes, Jenkins, and Ansible. Engineered deep cloud monitoring infrastructures using Datadog. Streamlined multi-tier application deployments and instituted rigid infrastructure-as-code practices across AWS.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>DevOps Engineer</h3>
+                                    <h4>Opulence Techno Soft Pvt Ltd</h4>
+                                </div>
+                                <span class="date">Dec 2019 - Apr 2021</span>
+                            </div>
+                            <p>Transformed legacy build systems into cohesive automated pipelines. Migrated vast repositories from SVN to Git, configured intricate Jenkins automation servers, and utilized Ansible playbooks to standardize application environments.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>System Admin & Build Engineer</h3>
+                                    <h4>Opulence Techno Soft Pvt Ltd</h4>
+                                </div>
+                                <span class="date">Jan 2018 - Dec 2019</span>
+                            </div>
+                            <p>Maintained Linux server fleets, resolved OS-level anomalies, managed regular backup & disaster recovery protocols, and initiated the company's first steps towards containerization with Docker Swarm.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
+
+        <!-- Detailed Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Technical <span class="gradient-text">Competencies</span></h2>
+                    <p>A comprehensive overview of the tools and technologies I utilize to build modern infrastructure.</p>
+                </div>
+
+                <div class="skills-grid">
+                    
+                    <div class="skill-card reveal">
+                        <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud Platforms</h3>
+                        <p><strong>AWS:</strong> EC2, S3, RDS, VPC, EKS, CloudWatch, Route53, Security Hub, DMS.</p>
+                        <p><strong>Azure:</strong> Virtual Machines, Key Vault, Azure Monitor, Azure DMS, Virtual Networks.</p>
+                    </div>
+
+                    <div class="skill-card reveal delay-1">
+                        <div class="icon-box"><i class="fas fa-code-branch"></i></div>
+                        <h3>IaC & Automation</h3>
+                        <p><strong>Terraform:</strong> Modules, Remote State Management, Multi-env deployments.</p>
+                        <p><strong>Ansible:</strong> Playbooks, Roles, Configuration standardization.</p>
+                        <p><strong>Scripting:</strong> Bash, Python, Groovy, PowerShell, YAML.</p>
+                    </div>
+
+                    <div class="skill-card reveal">
+                        <div class="icon-box"><i class="fas fa-box-open"></i></div>
+                        <h3>Containers & CI/CD</h3>
+                        <p><strong>Orchestration:</strong> Kubernetes (EKS), Docker, Docker Swarm, Helm.</p>
+                        <p><strong>Pipelines:</strong> GitLab CI/CD, Jenkins, GitHub Actions.</p>
+                        <p><strong>VCS:</strong> Git, GitHub, GitLab, SVN.</p>
+                    </div>
+
+                    <div class="skill-card reveal delay-1">
+                        <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Security & Observability</h3>
+                        <p><strong>Monitoring:</strong> Prometheus, Grafana, ELK Stack, Fluentd, Datadog.</p>
+                        <p><strong>Compliance:</strong> SOC 1/2, IRAP, NIST frameworks, IAM Least Privilege.</p>
+                        <p><strong>Tools:</strong> Lacework, CloudTrail, KMS Encryption, MFA Enforcement.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section section">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <h2>Let's build secure, automated infrastructure.</h2>
+                    <p>I am always open to discussing complex DevOps challenges, automation solutions, or potential career opportunities.</p>
+                    <div class="cta-links">
+                        <a href="mailto:lingarajjayli@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> lingarajjayli@gmail.com</a>
+                        <a href="https://linkedin.com/in/lingarajjayli" target="_blank" class="btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="tel:+919482830609" class="btn-secondary"><i class="fas fa-phone"></i> +91 9482830609</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="icon"><i class="fas fa-terminal"></i></span> Lingaraj
+            </div>
+            <p>&copy; 2026 Lingaraj. Designed for Impact & Scale.</p>
         </div>
     </footer>
 

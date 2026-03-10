@@ -1,33 +1,42 @@
-// Apple-style extremely smooth, subtle scroll animations
-
+// Premium Reveal Animations
 document.addEventListener('DOMContentLoaded', () => {
-    // Reveal Observer for smooth sliding up of elements
+    
+    // Smooth reveal for sections
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: Unobserve after revealing to keep the state
-                // observer.unobserve(entry.target); 
+                // observer.unobserve(entry.target); // Optional: animate only once
             }
         });
     }, observerOptions);
 
-    const revealElements = document.querySelectorAll('.reveal-up');
-    revealElements.forEach(el => {
+    document.querySelectorAll('.reveal').forEach(el => {
         observer.observe(el);
     });
 
-    // Make the initial hero reveal automatically instead of waiting for scroll
+    // Trigger hero animations explicitly on load
     setTimeout(() => {
-        const heroElements = document.querySelectorAll('.hero-section .reveal-up');
-        heroElements.forEach(el => {
+        document.querySelectorAll('.hero .reveal').forEach(el => {
             el.classList.add('active');
         });
     }, 100);
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+            navbar.style.background = 'rgba(11, 15, 25, 0.95)';
+            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
+        } else {
+            navbar.style.background = 'rgba(11, 15, 25, 0.8)';
+            navbar.style.boxShadow = 'none';
+        }
+    });
 });
