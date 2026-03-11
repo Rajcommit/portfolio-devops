@@ -284,6 +284,15 @@ footer p { font-size: 0.9rem; }
     transform: scale(1.1) translateY(-5px);
 }
 
+.fab-btn.linkedin { background: #0A66C2; }
+.fab-btn.linkedin:hover { box-shadow: 0 8px 20px rgba(10, 102, 194, 0.4); }
+
+.fab-btn.github { background: #333; }
+.fab-btn.github:hover { box-shadow: 0 8px 20px rgba(51, 51, 51, 0.4); }
+
+.fab-btn.github-repo { background: #6e5494; }
+.fab-btn.github-repo:hover { box-shadow: 0 8px 20px rgba(110, 84, 148, 0.4); }
+
 .fab-btn.whatsapp { background: #25D366; }
 .fab-btn.whatsapp:hover { box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); }
 
