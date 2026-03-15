@@ -62,9 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, 100);
 
-  // ── Navbar scroll ──
+  // ── Navbar scroll + back-to-top ──
   const nav = document.querySelector('.navbar');
-  if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 30));
+  const btt = document.querySelector('.back-to-top');
+  if (nav) window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+    if (btt) btt.classList.toggle('visible', window.scrollY > 400);
+  });
+  if (btt) btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   // ── Mobile menu ──
   const toggle = document.querySelector('.mobile-toggle');

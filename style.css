@@ -254,6 +254,30 @@ p{color:var(--text-dim);font-size:1rem}
 .footer-bottom{text-align:center;padding-top:24px;border-top:1px solid var(--border)}
 .footer-bottom p{font-size:.85rem;color:var(--text-dim)}
 
+/* ── TOOL LOGO STRIP ── */
+.logo-strip{padding:30px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(14,165,233,0.01)}
+.logo-strip-label{text-align:center;font-family:var(--mono);font-size:.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+.logo-row{display:flex;justify-content:center;flex-wrap:wrap;gap:24px}
+.logo-item{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text-dim);font-size:1.4rem;transition:var(--transition);opacity:0.4}
+.logo-item span{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:1px}
+.logo-item:hover{color:var(--cyan);opacity:1}
+
+/* ── CERT HIGHLIGHTS ── */
+.cert-highlight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.cert-highlight{display:flex;align-items:center;gap:16px;padding:20px 24px}
+.cert-hl-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(14,165,233,0.08)}
+.cert-highlight h4{font-size:.9rem;font-weight:600;margin-bottom:2px}
+.cert-highlight p{font-size:.75rem;color:var(--text-dim)}
+
+/* ── GITHUB GRAPH ── */
+.github-graph{text-align:center;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
+.gh-chart{width:100%;max-width:800px;height:auto;filter:brightness(0.9);border-radius:8px}
+
+/* ── BACK TO TOP ── */
+.back-to-top{position:fixed;bottom:28px;left:28px;width:42px;height:42px;border-radius:50%;background:#111;border:1px solid var(--border);color:var(--text-dim);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:var(--transition);z-index:999}
+.back-to-top.visible{opacity:1;visibility:visible}
+.back-to-top:hover{border-color:rgba(14,165,233,0.15);color:var(--cyan);transform:translateY(-2px)}
+
 /* ── PROFILE PHOTO — in CTA section ── */
 .cta-photo{margin:0 auto 28px;width:110px;height:110px;position:relative}
 .cta-photo::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(14,165,233,0.1);animation:spinSlow 20s linear infinite}
