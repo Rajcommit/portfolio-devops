@@ -2,28 +2,57 @@ name: DevOps Portfolio CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [master]
   pull_request:
-    branches: [ "master" ]
+    branches: [master]
 
 jobs:
-  # Job 1: Basic Health Check
   health-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - run: echo "Pipeline running ✓"
 
-      - name: Run a one-line script
-        run: echo "Hello, World! The pipeline is running."
-
-  # Job 2: Shell Script Linting (Best Practice)
   shellcheck:
-    name: ShellCheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
+      - uses: actions/checkout@v4
+      - uses: ludeeus/action-shellcheck@2.0.0
         with:
           scandir: './scripts'
+
+  html-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npx html-validate index.html about.html projects.html
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress --exclude linkedin.com --exclude wa.me '*.html'
+          fail: true
+
+  accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install -g pa11y serve
+      - name: Start server
+        run: npx serve . -l 8080 &
+      - name: Wait for server
+        run: sleep 3
+      - name: Run Pa11y on all pages
+        run: |
+          pa11y http://localhost:8080/index.html --threshold 5
+          pa11y http://localhost:8080/about.html --threshold 5
+          pa11y http://localhost:8080/projects.html --threshold 5
