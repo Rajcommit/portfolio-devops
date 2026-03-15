@@ -220,15 +220,15 @@ p{color:var(--text-dim);font-size:1rem}
 .cta-links{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 
 /* ── DEVOPS PIPELINE ── */
-.pipeline{display:flex;align-items:center;justify-content:center;gap:0;padding:40px 0;flex-wrap:wrap}
+.pipeline{display:flex;align-items:center;justify-content:center;gap:0;padding:40px 0}
 .pipe-stage{display:flex;flex-direction:column;align-items:center;gap:10px}
-.pipe-icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--gold);background:rgba(201,168,76,0.04);border:2px solid rgba(201,168,76,0.12);transition:var(--transition);position:relative}
-.pipe-icon::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(201,168,76,0.06);animation:pipePulse 3s ease-in-out infinite}
-@keyframes pipePulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.15);opacity:0}}
-.pipe-stage span{font-family:var(--mono);font-size:.75rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px}
-.pipe-stage:hover .pipe-icon{border-color:var(--gold);background:rgba(201,168,76,0.08);box-shadow:0 0 20px rgba(201,168,76,0.15);transform:translateY(-4px)}
+.pipe-icon{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--gold);background:rgba(201,168,76,0.08);border:2px solid rgba(201,168,76,0.25);transition:var(--transition);position:relative;box-shadow:0 0 15px rgba(201,168,76,0.08)}
+.pipe-icon::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(201,168,76,0.1);animation:pipePulse 3s ease-in-out infinite}
+@keyframes pipePulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.2);opacity:0}}
+.pipe-stage span{font-family:var(--mono);font-size:.75rem;color:var(--chrome);text-transform:uppercase;letter-spacing:1px}
+.pipe-stage:hover .pipe-icon{border-color:var(--gold);background:rgba(201,168,76,0.12);box-shadow:0 0 25px rgba(201,168,76,0.2);transform:translateY(-4px)}
 .pipe-stage:hover span{color:var(--gold)}
-.pipe-line{width:40px;height:2px;background:rgba(255,255,255,0.06);position:relative;overflow:hidden;margin-bottom:28px}
+.pipe-line{width:40px;height:3px;background:rgba(201,168,76,0.1);position:relative;overflow:hidden;margin-bottom:28px;border-radius:2px}
 .pipe-flow{position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:flowPipe 2s linear infinite}
 @keyframes flowPipe{to{left:100%}}
 
