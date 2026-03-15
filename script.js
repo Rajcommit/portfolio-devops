@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (p.y < 0 || p.y > H) p.vy *= -1;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(201,168,76,0.5)';
+      ctx.fillStyle = 'rgba(14,165,233,0.3)';
       ctx.fill();
       for (let j = i + 1; j < particles.length; j++) {
         const q = particles[j];
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(q.x, q.y);
-          ctx.strokeStyle = `rgba(180,180,180,${0.08 * (1 - dist / CONNECT_DIST)})`;
+          ctx.strokeStyle = `rgba(14,165,233,${0.08 * (1 - dist / CONNECT_DIST)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
