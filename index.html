@@ -65,6 +65,17 @@
   <main id="main-content" role="main">
     <!-- Hero -->
     <section class="hero">
+      <!-- Floating tech icons -->
+      <div class="hero-icons" aria-hidden="true">
+        <div class="float-icon fi-1"><i class="fab fa-aws"></i></div>
+        <div class="float-icon fi-2"><i class="fab fa-docker"></i></div>
+        <div class="float-icon fi-3"><i class="fas fa-dharmachakra"></i></div>
+        <div class="float-icon fi-4"><i class="fab fa-github"></i></div>
+        <div class="float-icon fi-5"><i class="fab fa-linux"></i></div>
+        <div class="float-icon fi-6"><i class="fab fa-python"></i></div>
+        <div class="float-icon fi-7"><i class="fas fa-database"></i></div>
+        <div class="float-icon fi-8"><i class="fas fa-shield-halved"></i></div>
+      </div>
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-badge"><span class="pulse"></span> Available for opportunities</div>
@@ -102,24 +113,36 @@
       </div>
     </section>
 
-    <!-- Stats -->
+    <!-- Stats with rings -->
     <section class="stats-bar">
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item reveal">
-            <h3><span class="accent" data-count="5" data-suffix="+">0</span></h3>
+            <div class="stat-ring" data-percent="100">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" class="ring-bg"/><circle cx="50" cy="50" r="42" class="ring-fill" style="--color:var(--gold)"/></svg>
+              <div class="stat-value"><span data-count="5" data-suffix="+">0</span></div>
+            </div>
             <p>Years Experience</p>
           </div>
           <div class="stat-item reveal delay-1">
-            <h3><span class="accent" data-count="40" data-suffix="+">0</span></h3>
+            <div class="stat-ring" data-percent="80">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" class="ring-bg"/><circle cx="50" cy="50" r="42" class="ring-fill" style="--color:var(--silver)"/></svg>
+              <div class="stat-value"><span data-count="40" data-suffix="+">0</span></div>
+            </div>
             <p>Microservices Managed</p>
           </div>
           <div class="stat-item reveal delay-2">
-            <h3><span class="accent" data-count="50" data-suffix="+">0</span></h3>
+            <div class="stat-ring" data-percent="90">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" class="ring-bg"/><circle cx="50" cy="50" r="42" class="ring-fill" style="--color:var(--gold)"/></svg>
+              <div class="stat-value"><span data-count="50" data-suffix="+">0</span></div>
+            </div>
             <p>Services Migrated</p>
           </div>
           <div class="stat-item reveal delay-3">
-            <h3><span class="accent">99.9%</span></h3>
+            <div class="stat-ring" data-percent="99">
+              <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" class="ring-bg"/><circle cx="50" cy="50" r="42" class="ring-fill" style="--color:var(--silver)"/></svg>
+              <div class="stat-value">99.9%</div>
+            </div>
             <p>Service Uptime</p>
           </div>
         </div>
@@ -176,10 +199,54 @@
       </div>
     </section>
 
+    <!-- DevOps Pipeline Visual -->
+    <section class="section" style="padding-top:20px;padding-bottom:40px">
+      <div class="container">
+        <div class="section-label reveal">Workflow</div>
+        <h2 class="section-title reveal"><span class="gradient-text">DevOps Pipeline</span></h2>
+        <div class="pipeline reveal">
+          <div class="pipe-stage">
+            <div class="pipe-icon"><i class="fas fa-code"></i></div>
+            <span>Code</span>
+          </div>
+          <div class="pipe-line"><div class="pipe-flow"></div></div>
+          <div class="pipe-stage">
+            <div class="pipe-icon"><i class="fas fa-code-branch"></i></div>
+            <span>Build</span>
+          </div>
+          <div class="pipe-line"><div class="pipe-flow"></div></div>
+          <div class="pipe-stage">
+            <div class="pipe-icon"><i class="fas fa-vial"></i></div>
+            <span>Test</span>
+          </div>
+          <div class="pipe-line"><div class="pipe-flow"></div></div>
+          <div class="pipe-stage">
+            <div class="pipe-icon"><i class="fab fa-docker"></i></div>
+            <span>Package</span>
+          </div>
+          <div class="pipe-line"><div class="pipe-flow"></div></div>
+          <div class="pipe-stage">
+            <div class="pipe-icon"><i class="fas fa-rocket"></i></div>
+            <span>Deploy</span>
+          </div>
+          <div class="pipe-line"><div class="pipe-flow"></div></div>
+          <div class="pipe-stage">
+            <div class="pipe-icon"><i class="fas fa-chart-line"></i></div>
+            <span>Monitor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="section cta-section">
       <div class="container">
         <div class="cta-box reveal">
+          <div class="cta-visual" aria-hidden="true">
+            <div class="cta-ring"></div>
+            <div class="cta-ring cta-ring-2"></div>
+            <div class="cta-center-icon"><i class="fas fa-handshake"></i></div>
+          </div>
           <h2>Let's <span class="gradient-text">Connect</span></h2>
           <p>Open to discussing DevOps roles, cloud architecture, or collaboration opportunities.</p>
           <div class="cta-links">
@@ -215,7 +282,7 @@
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="about.html">Experience</a>
-            <a href="resume.pdf" download="Raj-Abhishek-DevOps-Resume.pdf" style="color:var(--cyan)">Download Resume ↓</a>
+            <a href="resume.pdf" download="Raj-Abhishek-DevOps-Resume.pdf" style="color:var(--gold)">Download Resume ↓</a>
           </div>
         </div>
         <div>
@@ -225,7 +292,7 @@
             <a href="https://github.com/Rajcommit" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
             <a href="mailto:raj.vbeyond@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
-          <p style="font-size:0.85rem;color:var(--text-dim)"><i class="fas fa-map-marker-alt" style="margin-right:6px;color:var(--cyan)"></i>India</p>
+          <p style="font-size:0.85rem;color:var(--text-dim)"><i class="fas fa-map-marker-alt" style="margin-right:6px;color:var(--gold)"></i>India</p>
         </div>
       </div>
       <div class="footer-bottom">

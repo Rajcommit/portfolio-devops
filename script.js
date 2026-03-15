@@ -104,7 +104,21 @@ document.addEventListener('DOMContentLoaded', () => {
     type();
   }
 
-  // ── Counter animation ──
+  // ── Counter animation + ring animation ──
+  document.querySelectorAll('.stat-ring').forEach(ring => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const pct = +ring.dataset.percent || 100;
+          const circumference = 264;
+          ring.style.setProperty('--offset', circumference - (circumference * pct / 100));
+          ring.classList.add('animated');
+          io.unobserve(ring);
+        }
+      });
+    }, { threshold: 0.5 });
+    io.observe(ring);
+  });
   document.querySelectorAll('[data-count]').forEach(el => {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
