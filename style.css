@@ -184,6 +184,7 @@ p{color:var(--text-dim);font-size:1rem}
 .project-body li{position:relative;padding-left:20px;margin-bottom:8px;font-size:.88rem;color:var(--text-dim);line-height:1.6}
 .project-body li::before{content:'→';position:absolute;left:0;color:var(--gold)}
 .project-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:6px 14px;border-radius:8px;font-family:var(--mono);font-size:.78rem;color:var(--chrome);border:1px solid rgba(255,255,255,0.08);transition:var(--transition)}
+.project-link i{font-family:'Font Awesome 6 Brands','Font Awesome 6 Free';font-style:normal}
 .project-link:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ── EDUCATION & CERTS ── */
