@@ -269,9 +269,19 @@ p{color:var(--text-dim);font-size:1rem}
 .cert-highlight h4{font-size:.9rem;font-weight:600;margin-bottom:2px}
 .cert-highlight p{font-size:.75rem;color:var(--text-dim)}
 
-/* ── GITHUB GRAPH ── */
-.github-graph{text-align:center;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
-.gh-chart{width:100%;max-width:800px;height:auto;filter:brightness(0.9);border-radius:8px}
+/* ── BLOG CARDS ── */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.blog-card{display:flex;align-items:center;gap:16px;padding:20px 24px;text-decoration:none;color:var(--text)}
+.blog-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(14,165,233,0.08)}
+.blog-card h4{font-size:.9rem;font-weight:600;margin-bottom:2px;color:var(--text-bright)}
+.blog-card p{font-size:.75rem;color:var(--text-dim)}
+.blog-arrow{color:var(--text-dim);font-size:.8rem;margin-left:auto;transition:var(--transition)}
+.blog-card:hover .blog-arrow{color:var(--cyan);transform:translateX(4px)}
+
+/* ── VISITOR COUNTER ── */
+.visitor-counter{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:12px;opacity:0.5}
+.visitor-counter i{color:var(--text-dim);font-size:.75rem}
+.visitor-counter img{height:20px;border-radius:4px}
 
 /* ── BACK TO TOP ── */
 .back-to-top{position:fixed;bottom:28px;left:28px;width:42px;height:42px;border-radius:50%;background:#111;border:1px solid var(--border);color:var(--text-dim);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:var(--transition);z-index:999}
