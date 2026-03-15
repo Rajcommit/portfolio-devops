@@ -131,15 +131,11 @@ p{color:var(--text-dim);font-size:1rem}
 .stat-value{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:1.4rem;font-weight:700;color:var(--text-bright)}
 .stat-item p{font-size:.82rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
 
-/* ── GLASS CARDS — brushed metal with rotating border ── */
-.glass-card{background:var(--bg-card);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition);position:relative;overflow:hidden;transform-style:preserve-3d;perspective:800px}
-.glass-card::before{content:'';position:absolute;top:-1px;left:-1px;right:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),var(--text-bright),var(--cyan),transparent);opacity:0;transition:opacity .4s}
-.glass-card::after{content:'';position:absolute;inset:-1px;border-radius:var(--radius);background:conic-gradient(from var(--angle,0deg),transparent 0%,var(--cyan) 5%,transparent 10%,transparent 90%,var(--text-bright) 95%,transparent 100%);z-index:-1;opacity:0;transition:opacity .4s;animation:rotateBorder 4s linear infinite}
-@keyframes rotateBorder{to{--angle:360deg}}
-@property --angle{syntax:'<angle>';initial-value:0deg;inherits:false}
-.glass-card:hover{border-color:transparent;transform:translateY(-6px);box-shadow:0 2px 0 rgba(255,255,255,0.03) inset,0 25px 60px rgba(0,0,0,0.5)}
+/* ── GLASS CARDS — clean hover glow ── */
+.glass-card{background:var(--bg-card);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition);position:relative;overflow:hidden}
+.glass-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(14,165,233,0.2),transparent);opacity:0;transition:opacity .4s}
+.glass-card:hover{border-color:rgba(14,165,233,0.1);transform:translateY(-4px);box-shadow:0 0 20px rgba(14,165,233,0.04),0 20px 50px rgba(0,0,0,0.4)}
 .glass-card:hover::before{opacity:1}
-.glass-card:hover::after{opacity:1}
 
 /* ── SKILLS ── */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
@@ -264,6 +260,9 @@ p{color:var(--text-dim);font-size:1rem}
 .footer-social a:hover{color:var(--cyan)}
 .footer-bottom{text-align:center;padding-top:24px;border-top:1px solid var(--border)}
 .footer-bottom p{font-size:.85rem;color:var(--text-dim)}
+
+/* ── PROFILE PHOTO ── */
+.profile-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;border:2px solid rgba(14,165,233,0.15);box-shadow:0 0 20px rgba(14,165,233,0.06);margin-bottom:20px}
 
 /* ── ANIMATIONS ── */
 /* Glowing section divider */
