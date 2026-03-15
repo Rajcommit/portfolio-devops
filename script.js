@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ── Theme toggle ──
+  const themeBtn = document.querySelector('.theme-toggle');
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  if (themeBtn) {
+    const icon = themeBtn.querySelector('i');
+    function updateIcon() {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      icon.className = isLight ? 'fas fa-moon' : 'fas fa-leaf';
+    }
+    updateIcon();
+    themeBtn.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const next = isLight ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateIcon();
+    });
+  }
+
   // ── Particle constellation background ──
   const canvas = document.createElement('canvas');
   canvas.id = 'particles';
@@ -30,7 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (p.y < 0 || p.y > H) p.vy *= -1;
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(14,165,233,0.3)';
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const dotColor = isLight ? 'rgba(22,163,74,0.3)' : 'rgba(14,165,233,0.3)';
+      const lineColor = isLight ? 'rgba(22,163,74,' : 'rgba(14,165,233,';
+      ctx.fillStyle = dotColor;
       ctx.fill();
       for (let j = i + 1; j < particles.length; j++) {
         const q = particles[j];
@@ -40,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(q.x, q.y);
-          ctx.strokeStyle = `rgba(14,165,233,${0.08 * (1 - dist / CONNECT_DIST)})`;
+          ctx.strokeStyle = `${lineColor}${0.08 * (1 - dist / CONNECT_DIST)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
