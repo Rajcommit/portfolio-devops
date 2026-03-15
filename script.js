@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // ── Page transitions ──
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href && href.endsWith('.html') && !a.hasAttribute('download') && !a.getAttribute('target')) {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.classList.add('fade-out');
+        setTimeout(() => window.location.href = href, 200);
+      });
+    }
+  });
+
   // ── Theme toggle ──
   const themeBtn = document.querySelector('.theme-toggle');
   const saved = localStorage.getItem('theme');

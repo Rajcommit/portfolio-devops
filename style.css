@@ -394,6 +394,11 @@ p{color:var(--text-dim);font-size:1rem}
 .cursor{display:inline-block;width:2px;height:1em;background:var(--cyan);margin-left:4px;animation:blink 1s step-end infinite;vertical-align:text-bottom}
 @keyframes blink{50%{opacity:0}}
 
+/* ── PAGE TRANSITION ── */
+body{opacity:0;animation:fadeIn .3s ease forwards}
+body.fade-out{opacity:0;transition:opacity .2s ease}
+@keyframes fadeIn{to{opacity:1}}
+
 /* ── ACCESSIBILITY ── */
 a:focus-visible,.btn:focus-visible,.float-btn:focus-visible,.mobile-toggle:focus-visible,.nav-social:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
 .nav-links a:focus-visible{outline-offset:2px;border-radius:8px}
