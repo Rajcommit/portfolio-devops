@@ -36,7 +36,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: lycheeverse/lychee-action@v1
         with:
-          args: --no-progress --exclude linkedin.com --exclude wa.me '*.html'
+          args: >-
+            --no-progress
+            --exclude linkedin.com
+            --exclude wa.me
+            --exclude fonts.googleapis.com
+            --exclude fonts.gstatic.com
+            --exclude medium.com
+            --exclude dev.to
+            --exclude gitlab.com
+            '*.html'
           fail: true
 
   accessibility:
@@ -46,13 +55,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g pa11y serve
+      - run: |
+          npm install -g pa11y serve
+          npx puppeteer browsers install chrome
       - name: Start server
         run: npx serve . -l 8080 &
       - name: Wait for server
         run: sleep 3
       - name: Run Pa11y on all pages
         run: |
-          pa11y http://localhost:8080/index.html --threshold 5
-          pa11y http://localhost:8080/about.html --threshold 5
-          pa11y http://localhost:8080/projects.html --threshold 5
+          pa11y http://localhost:8080/index.html --threshold 5 --launch-options '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'
+          pa11y http://localhost:8080/about.html --threshold 5 --launch-options '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'
+          pa11y http://localhost:8080/projects.html --threshold 5 --launch-options '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'

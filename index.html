@@ -34,7 +34,7 @@
 
   <!-- Mobile Nav Overlay -->
   <div class="mobile-nav">
-    <button class="close-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
+    <button type="button" class="close-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="about.html">Experience</a>
@@ -58,12 +58,12 @@
         <a href="https://github.com/Rajcommit" target="_blank" rel="noopener noreferrer" class="nav-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="resume.pdf" download="Raj-Abhishek-DevOps-Resume.pdf" class="btn btn-glow btn-sm"><i class="fas fa-download"></i> Resume</a>
       </div>
-      <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-leaf"></i></button>
-      <button class="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      <button type="button" class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-leaf"></i></button>
+      <button type="button" class="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
     </div>
   </header>
 
-  <main id="main-content" role="main">
+  <main id="main-content">
     <!-- Hero -->
     <section class="hero">
       <!-- Floating tech icons -->
@@ -82,7 +82,7 @@
           <div class="hero-badge"><span class="pulse"></span> Available for opportunities</div>
           <h1>Raj <span class="gradient-text">Abhishek</span></h1>
           <p class="hero-role"><span class="typed-text">DevOps Engineer</span><span class="cursor"></span></p>
-          <p class="hero-desc">5+ years building resilient multi-cloud infrastructure across AWS, Azure & GCP. Specializing in Kubernetes orchestration, CI/CD automation, Infrastructure as Code, and observability at scale.</p>
+          <p class="hero-desc">5+ years building resilient multi-cloud infrastructure across AWS, Azure &amp; GCP. Specializing in Kubernetes orchestration, CI/CD automation, Infrastructure as Code, and observability at scale.</p>
           <div class="hero-actions">
             <a href="resume.pdf" download="Raj-Abhishek-DevOps-Resume.pdf" class="btn btn-glow"><i class="fas fa-download"></i> Download Resume</a>
             <a href="projects.html" class="btn btn-ghost"><i class="fas fa-rocket"></i> View Projects</a>
@@ -199,7 +199,7 @@
           </div>
           <div class="glass-card skill-card reveal delay-1">
             <div class="skill-icon cicd"><i class="fas fa-code-branch"></i></div>
-            <h3>CI/CD & GitOps</h3>
+            <h3>CI/CD &amp; GitOps</h3>
             <p>Zero-downtime deployment pipelines with automated testing and quality gates.</p>
             <div class="skill-tags">
               <span class="skill-tag">GitHub Actions</span><span class="skill-tag">GitLab CI</span>
@@ -208,7 +208,7 @@
           </div>
           <div class="glass-card skill-card reveal delay-2">
             <div class="skill-icon iac"><i class="fas fa-cubes"></i></div>
-            <h3>IaC & Automation</h3>
+            <h3>IaC &amp; Automation</h3>
             <p>Reusable modules and playbooks for consistent multi-environment provisioning.</p>
             <div class="skill-tags">
               <span class="skill-tag">Terraform</span><span class="skill-tag">Ansible</span>
@@ -217,7 +217,7 @@
           </div>
           <div class="glass-card skill-card reveal delay-3">
             <div class="skill-icon security"><i class="fas fa-shield-halved"></i></div>
-            <h3>Security & Observability</h3>
+            <h3>Security &amp; Observability</h3>
             <p>SLI/SLO alerting, DevSecOps controls, and full-stack monitoring.</p>
             <div class="skill-tags">
               <span class="skill-tag">Prometheus</span><span class="skill-tag">Grafana</span>
@@ -330,29 +330,13 @@
     <section class="section" style="padding-top:20px;padding-bottom:30px">
       <div class="container">
         <div class="section-label reveal">Thought Leadership</div>
-        <h2 class="section-title reveal"><span class="gradient-text">Articles & Insights</span></h2>
+        <h2 class="section-title reveal"><span class="gradient-text">Articles &amp; Insights</span></h2>
         <div class="blog-grid">
           <a href="https://www.linkedin.com/in/raj-abhishek-devops/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="glass-card blog-card reveal">
             <div class="blog-icon"><i class="fab fa-linkedin"></i></div>
             <div>
               <h4>LinkedIn Articles</h4>
               <p>DevOps insights, cloud architecture, and career perspectives.</p>
-            </div>
-            <i class="fas fa-arrow-right blog-arrow"></i>
-          </a>
-          <a href="https://medium.com/@raj.vbeyond" target="_blank" rel="noopener noreferrer" class="glass-card blog-card reveal delay-1">
-            <div class="blog-icon"><i class="fab fa-medium"></i></div>
-            <div>
-              <h4>Medium</h4>
-              <p>Technical deep-dives on Kubernetes, Terraform, and CI/CD.</p>
-            </div>
-            <i class="fas fa-arrow-right blog-arrow"></i>
-          </a>
-          <a href="https://dev.to/rajcommit" target="_blank" rel="noopener noreferrer" class="glass-card blog-card reveal delay-2">
-            <div class="blog-icon"><i class="fab fa-dev"></i></div>
-            <div>
-              <h4>Dev.to</h4>
-              <p>Tutorials, guides, and community contributions.</p>
             </div>
             <i class="fas fa-arrow-right blog-arrow"></i>
           </a>
@@ -426,7 +410,7 @@
     </div>
   </footer>
 
-  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+  <button type="button" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
   <script src="script.js" defer></script>
 </body>
 </html>
