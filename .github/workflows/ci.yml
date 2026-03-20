@@ -64,6 +64,6 @@ jobs:
         run: sleep 3
       - name: Run Pa11y on all pages
         run: |
-          pa11y http://localhost:8080/index.html --threshold 5 --launch-options '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'
-          pa11y http://localhost:8080/about.html --threshold 5 --launch-options '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'
-          pa11y http://localhost:8080/projects.html --threshold 5 --launch-options '{"args":["--no-sandbox","--disable-setuid-sandbox"]}'
+          pa11y http://localhost:8080/index.html --threshold 5 --config pa11y.json
+          pa11y http://localhost:8080/about.html --threshold 5 --config pa11y.json
+          pa11y http://localhost:8080/projects.html --threshold 5 --config pa11y.json
